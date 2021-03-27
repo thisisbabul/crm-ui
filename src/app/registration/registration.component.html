@@ -1,0 +1,63 @@
+<div class="p-grid p-d-flex p-jc-center">
+  <h2>Create Account</h2>
+</div>
+
+<div class="p-grid p-d-flex p-jc-center p-fluid p-formgrid">
+  <div class="p-fluid b-border p-p-4">
+
+    <div class="p-field">
+      <label>First Name</label>
+      <input [(ngModel)]="user.firstName" type="text" pInputText class="p-inputtext-sm">
+    </div>
+
+    <div class="p-field">
+      <label>Last Name</label>
+      <input [(ngModel)]="user.lastName" type="text" pInputText class="p-inputtext-sm">
+    </div>
+
+    <div class="p-field">
+      <label>Subdomain</label>
+      <input [(ngModel)]="user.subdomain" type="text" pInputText class="p-inputtext-sm">
+    </div>
+
+    <div class="p-field">
+      <label>Date of Birth</label>
+      <p-calendar [(ngModel)]="user.dob" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030" inputId="navigators"></p-calendar>
+    </div>
+
+    <!--<div class="p-field">
+      <ul>
+        <li *ngFor="let theList of setOfLists">
+          <p-dropdown [options]="theList" appendTo="body" placeholder="** Select assign to **" (onChange)="addMore()">
+          </p-dropdown>
+        </li>
+      </ul>
+    </div>-->
+
+    <div class="p-field">
+      <label>Phone</label>
+      <input [(ngModel)]="user.phone" type="text" pInputText class="p-inputtext-sm">
+    </div>
+
+    <div class="p-field">
+      <label>Email</label>
+      <input [(ngModel)]="user.email" type="text" pInputText class="p-inputtext-sm">
+    </div>
+
+    <div class="p-field">
+      <label>Password</label>
+      <input [(ngModel)]="user.password" type="password" pPassword class="p-inputtext-sm"/>
+    </div>
+
+    <!--<div class="p-field">
+      <label>Confirm Password</label>
+      <input type="password" pPassword class="p-inputtext-sm"/>
+    </div>-->
+
+    <button (click)="registration()" pButton type="button" label="Save" class="p-button-sm"></button>
+  </div>
+</div>
+<div class="p-grid p-d-flex p-jc-center">
+  <p>Have an account?</p>
+  <a [routerLink]="['/']" class="p-mt-3 p-ml-1">Login</a>
+</div>

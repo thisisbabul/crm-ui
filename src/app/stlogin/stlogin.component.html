@@ -1,0 +1,33 @@
+<p-toast></p-toast>
+<div class="p-grid p-d-flex p-jc-center">
+  <h2>Login</h2>
+</div>
+
+<div class="p-grid p-d-flex p-jc-center">
+  <div class="p-fluid b-border p-p-4">
+    <div class="p-field">
+      <label>Student/Teacher Id</label>
+      <input type="text" pInputText [(ngModel)]="auth.studentId"/>
+    </div>
+    <div class="p-field">
+      <label>Subdomain</label>
+      <p-dropdown [options]="countries" [(ngModel)]="auth.subdomain" optionLabel="name" [filter]="true" placeholder="Select a Subdomain">
+        <ng-template let-subdomain pTemplate="item">
+          <div class="country-item">
+            <div>{{subdomain.value.name}}</div>
+          </div>
+        </ng-template>
+      </p-dropdown>
+    </div>
+    <div class="p-field">
+      <label>Password</label>
+      <input type="password" pInputText [(ngModel)]="auth.password"/>
+    </div>
+    <button pButton type="button" label="Login" (click)="login()"></button>
+  </div>
+</div>
+
+<div class="p-grid p-d-flex p-jc-center">
+  <p>Are you Admin? </p>
+  <a [routerLink]="['/']" class="p-mt-3 p-ml-1">Login</a>
+</div>

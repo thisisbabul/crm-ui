@@ -1,0 +1,27 @@
+<p-toast></p-toast>
+<div class="p-grid p-d-flex p-jc-center">
+  <h2>Login</h2>
+</div>
+
+<div class="p-grid p-d-flex p-jc-center">
+  <div class="p-fluid b-border p-p-4">
+    <div class="p-field">
+      <label>Subdomain</label>
+      <input type="text" pInputText class="p-inputtext-lg" [(ngModel)]="auth.subdomain"/>
+    </div>
+    <div class="p-field">
+      <label>Password</label>
+      <input type="password" pInputText class="p-inputtext-lg" [(ngModel)]="auth.password"/>
+    </div>
+    <button pButton type="button" label="Login" class="p-button-lg" (click)="login()"></button>
+  </div>
+</div>
+
+<div class="p-grid p-d-flex p-jc-center">
+  <p>Don't have an account?</p>
+  <a [routerLink]="['/registration']" class="p-mt-3 p-ml-1">Register</a>
+</div>
+<div class="p-grid p-d-flex p-jc-center">
+  <p>Are you Student or Teacher? </p>
+  <a [routerLink]="['/stlogin']" class="p-mt-3 p-ml-1">Login</a>
+</div>
